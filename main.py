@@ -14,6 +14,8 @@ blowfish_src = blowfish.Cipher(random_key)
 (publicKeyDest, privateKeyDest) = rsa.newkeys(1024)
 # print(publicKey)
 # print(privateKey)
+
+
 print("\n___________\n")
 
 print("\n\n __ Encryption Phase")

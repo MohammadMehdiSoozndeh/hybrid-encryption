@@ -6,10 +6,10 @@ from os import urandom
 print("A Hybrid Cryptography Algorithm for Cloud Computing Security\n")
 
 data = urandom(8)
-print("original data (f) => " + data.hex() + "\n_______\n")
+print("original data (f)                => " + data.hex() + "\n_______\n")
 
 random_key = urandom(56)  # 448 bit
-print("random secret key (K) => " + str(random_key.hex()))
+print("random secret key (K)            => " + str(random_key.hex()))
 blowfish_src = blowfish.Cipher(random_key)
 (publicKeyDest, privateKeyDest) = rsa.newkeys(1024)
 
@@ -25,7 +25,7 @@ print("encrypted key (Ek)               => " + encrypted_key.hex())
 print("message digest (Md)              => " + str(message_digest.hexdigest()))
 print("digital signature (ds)           => " + str(digital_sign))
 
-print("\n\n--\t Send (Ef, Ek, ds) to destination \t-->")
+print("\n\n==| Send(Ef, Ek, ds) to Destination |==>")
 
 print("\n\n __ Decryption Phase")
 # Decryption Phase

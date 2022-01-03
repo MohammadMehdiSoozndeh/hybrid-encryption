@@ -12,11 +12,6 @@ random_key = urandom(56)  # 448 bit
 print("random secret key (K) => " + str(random_key.hex()))
 blowfish_src = blowfish.Cipher(random_key)
 (publicKeyDest, privateKeyDest) = rsa.newkeys(1024)
-# print(publicKey)
-# print(privateKey)
-
-
-print("\n___________\n")
 
 print("\n\n __ Encryption Phase")
 # Encryption Phase
@@ -30,7 +25,7 @@ print("encrypted key (Ek)               => " + encrypted_key.hex())
 print("message digest (Md)              => " + str(message_digest.hexdigest()))
 print("digital signature (ds)           => " + str(digital_sign))
 
-print("\n\n-- \t send (Ef, Ek, ds) to destination \t -->")
+print("\n\n--\t Send (Ef, Ek, ds) to destination \t-->")
 
 print("\n\n __ Decryption Phase")
 # Decryption Phase
